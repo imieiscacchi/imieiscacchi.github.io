@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Emanuele C.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="icon/png" href="src/images/logo.png">
+    <link rel="stylesheet" href="src/styles/style-home.css">
+    <link rel="stylesheet" href="src/styles/initial-animation.css">
+    <title>I miei scacchi - Home</title>
+    <script defer>
+        window.addEventListener("load", () => {
+            const intro = document.getElementById("initial-animation");
+            if (sessionStorage.getItem("introPlayed")) {
+                intro.remove();
+                return;
+            }
+            sessionStorage.setItem("introPlayed", "true");
+            intro.addEventListener("animationend", () => {
+                intro.remove();
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="initial-animation">
+        <img src="src/images/logo1.png" alt="intro">
+    </div>
+    <div class="wrapper">
+        <!--NAVBAR-->
+        <nav>
+            <a href="index.html" class="nav-link" title="Home"><div class="nav-logo"><img src="src/images/logo1.png" alt="logo"></div></a>
+            <a href="src/pages/pagina1.html" class="nav-link"><div class="nav-item">Regole</div></a>
+            <a href="src/pages/pagina2.html" class="nav-link"><div class="nav-item">Storia</div></a>
+            <a href="src/pages/pagina3.html" class="nav-link"><div class="nav-item">About me</div></a>
+        </nav>
+
+        <div class="container">
+            <!--HEADER-->
+            <header>
+                <h1>Benvenuto sul mio sito! <br> Qui ti parlerò della mia esperienza nel mondo degli scacchi</h1>
+            </header>
+
+            <!--MAIN-->
+            <main>
+                <div class="gallery">
+                    <div class="image"><img src="src/images/home/img1.png" alt="Scacchiera"></div>
+                    <div class="image"><img src="src/images/home/img2.png" alt="Arabi che giocano"></div>
+                    <div class="image"><img src="src/images/home/img3.jpeg" alt="Una foto della mia scacchiera"></div>
+                    <div class="image"><img src="src/images/home/img4.png" alt="Io mentre ricevo il trofeo"></div>
+                </div>
+            </main>
+        </div> <!--fine container-->
+    </div> <!--fine wrapper-->
+    
+    <!--FOOTER-->
+    <footer>
+        <p>&COPY; 2025 Emanuele C. Titti i diritti riservati.</p>
+    </footer>
+</body>
+</html>
