@@ -28,8 +28,22 @@
     box-sizing: border-box;
 }
 html {
+    /*font-size: 16px;*/
+    font-size: clamp(12px, 2vw, 16px);
+}/*
+html {
     font-size: 16px;
 }
+@media (max-width:1400px) {
+    html {
+        font-size: 12px;
+    }
+}
+@media (max-width:400px) {
+    html {
+        font-size: 8px;
+    }
+}*/
 body {
     min-height: 100vh;
     display: flex;
@@ -45,11 +59,13 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 20px 30px;
+    /*padding: 20px 30px;*/
+    padding: clamp(5px, 1.25rem, 40px) clamp(7.5px, 2rem, 60px);
 }
 /*-----------------------------------------------------------------------------------*/
 header {
-    padding-block: 20px;
+    /*padding-block: 20px;*/
+    padding-block: clamp(20px, 1.25rem, 40px);
 }
 h1 {
     text-align: center;
@@ -63,14 +79,18 @@ nav {
     align-items: stretch;
     font-size: 1.5rem;
 }
-.nav-link{
+.nav-link:not(.logo){
     text-decoration: none;
     display: flex;
     align-items: center;
+    display: block;
+    align-self: center;
 }
 .nav-item {
-    border-radius: 20px;
-    padding: 27px 15px;
+    /*border-radius: 20px;*/
+    border-radius: 1.5rem;
+    /*padding: 27px 15px;*/
+    padding: clamp(12px, 1.5rem, 48px) clamp(8px, 1rem, 32px);
     text-align: center;
     background-color: var(--navbar);
     color: var(--nav-link);
@@ -78,15 +98,37 @@ nav {
 .nav-logo {
     display: flex;
     align-items: center;
-    padding-inline: 8px;
+    /*padding-inline: 8px;*/
+    padding-inline: clamp(4px, .5rem, 16px);
 }
 .nav-logo img {
-    width: 90px;
+    /*width: 90px;*/
+    width: clamp(50px, 5.5rem, 180px);
 }
 .nav-link:hover .nav-item {
     background-color: var(--nav-link);
     color: var(--navbar);
 }
+@media(max-width: 500px) {
+    nav {
+        flex-direction: column;
+    }
+    .nav-item {
+        padding: clamp(12px, 1.5rem, 48px) clamp(8px, 1rem, 32px);
+    }
+}
+/*
+@media(max-width: 600px) {
+    nav {
+        flex-direction: column;
+    }
+    .nav-logo img {
+        width: 60px;
+    }
+    .nav-logo {
+        padding: 8px;
+    }
+}*/
 /*...........................................................*/
 main {
     font-size: 1.5rem;
@@ -111,6 +153,10 @@ p {
 p, li {
     text-align: justify;
 }
+.table-wrapper {
+    overflow-x: auto;
+    width: 100%;
+}
 table {
     border-collapse: collapse;
     width: 100%;
@@ -118,7 +164,7 @@ table {
 table, tr, th, td {
     border: 2px solid var(--table-border);
 }
-tr:first-child {
+thead {
     background-color: var(--table-header);
     color: var(--table-header-color);
 }
@@ -154,7 +200,8 @@ a {
     padding-top: 10px;
 }
 .gallery {
-    padding: 40px;
+    /*padding: 40px;*/
+    padding: clamp(10px, 2.5rem, 80px);
     padding-top: 30px;
     display: flex;
     flex-wrap: wrap;
@@ -167,9 +214,54 @@ a {
                 0px 0px 10px var(--shadow-effect),
                 0px 0px 20px var(--shadow-effect),
                 0px 0px 35px var(--shadow-effect);
-    padding: 15px;
+    /*padding: 15px;*/
+    padding: 1rem;
     max-width: 20%;
     border-radius: 10px;
+}
+@media (max-width:1194px) { /*valori esclusi*/
+    .image {
+        flex: 1 1 46%;
+        max-width: 46%;
+    }
+}
+@media (max-width:1019px) {
+    .image {
+        flex: 1 1 45%;
+        max-width: 45%;
+    }
+}
+@media (max-width:844px) {
+    .image {
+        flex: 1 1 44%;
+        max-width: 44%;
+    }
+}
+@media (max-width:711px) {
+    .image {
+        flex: 1 1 43%;
+        max-width: 43%;
+    }
+    .gallery {
+        gap: 65px;
+    }
+}
+@media (max-width:711px) {
+    .image {
+        flex: 1 1 43%;
+        max-width: 43%;
+        min-width: 268px;
+    }
+    .gallery {
+        gap: 65px;
+    }
+}
+@media (max-width:400px) {
+    .image {
+        min-width: auto;
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
 }
 .image img {
     width: 100%;
@@ -185,25 +277,11 @@ footer {
     justify-content: center;
     background-color: var(--footer-bg);
     color: var(--footer-color);
-    padding: 20px 30px;
-    text-align: center;
+    /*padding: 20px 30px;*/
+    padding: clamp(5px, 1.25rem, 40px) clamp(7.5px, 2rem, 60px);
     font-size: 1.2rem;
 }
+footer p {
+    text-align: center;
+}
 /*...........................................................*/
-@media (max-width:1400px) {
-    .image {
-        flex: 1 1 46%;
-        max-width: 46%;
-    }
-}
-@media(max-width: 600px) {
-    nav {
-        flex-direction: column;
-    }
-}
-@media (max-width:400px) {
-    .image {
-        flex: 1 1 100%;
-        max-width: 100%;
-    }
-}
