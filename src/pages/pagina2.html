@@ -12,7 +12,7 @@
     <div class="wrapper">
         <!--NAVBAR-->
         <nav>
-            <a href="../../index.html" class="nav-link" title="Home"><div class="nav-logo"><img src="../images/logo1.png" alt="logo"></div></a>
+            <a href="../../index.html" class="nav-link logo" title="Home"><div class="nav-logo"><img src="../images/logo1.png" alt="logo"></div></a>
             <a href="../../index.html" class="nav-link"><div class="nav-item">Home</div></a>
             <a href="pagina1.html" class="nav-link"><div class="nav-item">Regole</div></a>
             <a href="pagina3.html" class="nav-link"><div class="nav-item">About me</div></a>
@@ -114,51 +114,57 @@
                 <!-------------------------->
                 <section id="campioni">
                     <h2>Elenco dei campioni del mondo</h2>
-                    <table>
-                        <tr>
-                            <th>#</th>
-                            <th>Giocatore</th>
-                            <th>Anno</th>
-                            <th>Vittorie</th>
-                            <th>Anno/i della/e vittoria/e</th>
-                        </tr>
-                        <tr><td>01</td>    <td>Wilhelm Steinitz</td>        <td>1886-94</td>
-                            <td>4</td>     <td>1886/89/90/92</td></tr>
-                        <tr><td>02</td>    <td>Emanuel Lasker</td>          <td>1894-1921</td>
-                            <td>6</td>     <td>1894/96, 1907/08/10*/10</td></tr>
-                        <tr><td>03</td>    <td>Jose Raul Capablanca</td>    <td>1921-27</td>
-                            <td>1</td>     <td>1921</td></tr>
-                        <tr><td>04</td>    <td>Alexander Alekhine</td>      <td>1927-35, 1937-46</td>
-                            <td>4</td>     <td>1927/29/34/37</td></tr>
-                        <tr><td>05</td>    <td>Max Euwe</td>                <td>1935-37</td>
-                            <td>1</td>     <td>1935</td></tr>
-                        <tr><td>06</td>    <td>Mikhail Botvinnik</td>       <td>1948-57, 1958-60, 1961-63</td>
-                            <td>5</td>     <td>1948t/51*/54*/58/61</td></tr>
-                        <tr><td>07</td>    <td>Vasily Smyslov</td>          <td>1957-58</td>
-                            <td>1</td>     <td>1957</td></tr>
-                        <tr><td>08</td>    <td>Mikhail Tal</td>             <td>1960-61</td>
-                            <td>1</td>     <td>1960</td></tr>
-                        <tr><td>09</td>    <td>Tigran V. Petrosian</td>     <td>1963-69</td>
-                            <td>2</td>     <td>1963/66</td></tr>
-                        <tr><td>10</td>    <td>Boris Spassky</td>           <td>1969-72</td>
-                            <td>1</td>     <td>1969</td></tr>
-                        <tr><td>11</td>    <td>Bobby Fischer</td>           <td>1972-75</td>
-                            <td>1</td>     <td>1972</td></tr>
-                        <tr><td>12</td>    <td>Anatoly Karpov</td>          <td>1975-85</td>
-                            <td>3#</td>    <td>1975d/78/81/84#</td></tr>
-                        <tr><td>13</td>    <td>Garry Kasparov</td>          <td>1985-2000</td>
-                            <td>6</td>     <td>1985/86/87*/90/93/95</td></tr>
-                        <tr><td>14</td>    <td>Vladimir Kramnik</td>        <td>2000-07</td>
-                            <td>3</td>     <td>2000/04*/06**</td></tr>
-                        <tr><td>15</td>    <td>Viswanathan Anand</td>       <td>2007-13</td>
-                            <td>4</td>     <td>2007t/08/10/12**</td></tr>
-                        <tr><td>16</td>    <td>Magnus Carlsen</td>           <td>2013-23</td>
-                            <td>5</td>     <td>2013/14/16**/18**/21</td></tr>
-                        <tr><td>17</td>    <td>Ding Liren</td>              <td>2023-24</td>
-                            <td>1</td>     <td>2023**</td></tr>
-                        <tr><td>19</td>    <td>Dommaraju Gukesh</td>        <td>2024-presente</td>
-                            <td>1</td>     <td>2024</td></tr>
-                    </table>
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Giocatore</th>
+                                    <th>Anno</th>
+                                    <th>Vittorie</th>
+                                    <th>Anno/i della/e vittoria/e</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>01</td>    <td>Wilhelm Steinitz</td>        <td>1886-94</td>
+                                    <td>4</td>     <td>1886/89/90/92</td></tr>
+                                <tr><td>02</td>    <td>Emanuel Lasker</td>          <td>1894-1921</td>
+                                    <td>6</td>     <td>1894/96, 1907/08/10*/10</td></tr>
+                                <tr><td>03</td>    <td>Jose Raul Capablanca</td>    <td>1921-27</td>
+                                    <td>1</td>     <td>1921</td></tr>
+                                <tr><td>04</td>    <td>Alexander Alekhine</td>      <td>1927-35, 1937-46</td>
+                                    <td>4</td>     <td>1927/29/34/37</td></tr>
+                                <tr><td>05</td>    <td>Max Euwe</td>                <td>1935-37</td>
+                                    <td>1</td>     <td>1935</td></tr>
+                                <tr><td>06</td>    <td>Mikhail Botvinnik</td>       <td>1948-57, 1958-60, 1961-63</td>
+                                    <td>5</td>     <td>1948t/51*/54*/58/61</td></tr>
+                                <tr><td>07</td>    <td>Vasily Smyslov</td>          <td>1957-58</td>
+                                    <td>1</td>     <td>1957</td></tr>
+                                <tr><td>08</td>    <td>Mikhail Tal</td>             <td>1960-61</td>
+                                    <td>1</td>     <td>1960</td></tr>
+                                <tr><td>09</td>    <td>Tigran V. Petrosian</td>     <td>1963-69</td>
+                                    <td>2</td>     <td>1963/66</td></tr>
+                                <tr><td>10</td>    <td>Boris Spassky</td>           <td>1969-72</td>
+                                    <td>1</td>     <td>1969</td></tr>
+                                <tr><td>11</td>    <td>Bobby Fischer</td>           <td>1972-75</td>
+                                    <td>1</td>     <td>1972</td></tr>
+                                <tr><td>12</td>    <td>Anatoly Karpov</td>          <td>1975-85</td>
+                                    <td>3#</td>    <td>1975d/78/81/84#</td></tr>
+                                <tr><td>13</td>    <td>Garry Kasparov</td>          <td>1985-2000</td>
+                                    <td>6</td>     <td>1985/86/87*/90/93/95</td></tr>
+                                <tr><td>14</td>    <td>Vladimir Kramnik</td>        <td>2000-07</td>
+                                    <td>3</td>     <td>2000/04*/06**</td></tr>
+                                <tr><td>15</td>    <td>Viswanathan Anand</td>       <td>2007-13</td>
+                                    <td>4</td>     <td>2007t/08/10/12**</td></tr>
+                                <tr><td>16</td>    <td>Magnus Carlsen</td>           <td>2013-23</td>
+                                    <td>5</td>     <td>2013/14/16**/18**/21</td></tr>
+                                <tr><td>17</td>    <td>Ding Liren</td>              <td>2023-24</td>
+                                    <td>1</td>     <td>2023**</td></tr>
+                                <tr><td>19</td>    <td>Dommaraju Gukesh</td>        <td>2024-presente</td>
+                                    <td>1</td>     <td>2024</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
                     <p>Legenda: t - Vittoria; * - Titolo mantenuto pareggiando; ** - Vittoria agli spareggi rapid;
                             # - In vantaggio quando il match è stato cancellato senza risultato ufficiale; d - Rinincia;</p>
                 </section>
@@ -183,9 +189,9 @@
     
     <!--FOOTER-->
     <footer>
-        <p>&COPY; 2025 Emanuele C. Tutti i diritti riservati.  Alcune immagini presenti su questo 
-            sito sono di pubblico dominio e/o rilasciate con licenza libera. I diritti relativi a 
-            tali immagini appartengono ai rispettivi autori oppure sono liberi da copyright, come indicato dalle fonti.</p>
+        <p>&COPY; 2025 Emanuele C. Tutti i diritti riservati. Alcune immagini presenti su questa pagina sono 
+            di pubblico dominio e/o rilasciate con licenza libera. I diritti relativi a tali immagini appartengono 
+            ai rispettivi autori oppure sono liberi da copyright, come indicato dalle fonti.</p>
     </footer>
 </body>
 </html>
