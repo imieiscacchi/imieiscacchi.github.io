@@ -16,8 +16,26 @@
     animation: fadeOut 1.5s ease-in-out 1s forwards;
 }
 #initial-animation img {
-    width: 15vw;
+    width: max(15vw, 15vh);
+    max-width: min(90vw, 90vh);
+    aspect-ratio: 1 / 1;
+    height: auto;
     display: block;
+}
+@media (max-width: 800px) {
+    #initial-animation img {
+        width: clamp(156px, min(20vw, 20vh), 400px);
+    }
+}
+@media (max-width: 400px) {
+    #initial-animation img {
+        width: clamp(100px, min(40vw, 40vh), 300px);
+    }
+}
+@media (max-width: 200px) {
+    #initial-animation img {
+        width: clamp(50px, min(70vw, 70vh), 180px);
+    }
 }
 @keyframes fadeOut{
     0% {
